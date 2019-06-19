@@ -1,0 +1,57 @@
+{
+    "name": "digitonic/mdoc-api",
+    "description": "A Framework Agnostic PHP SDK to interact with the mDoc API.",
+    "keywords": [
+        "digitonic",
+        "mdoc-api"
+    ],
+    "homepage": "https://github.com/digitonic/mdoc-api",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Steven Richardson",
+            "email": "steven@digitonic.co.uk",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.2",
+        "guzzlehttp/guzzle": "~6.0",
+        "illuminate/support": "5.8.*",
+        "ext-json": "*"
+    },
+    "require-dev": {
+        "orchestra/testbench": "3.8.*",
+        "phpunit/phpunit": "^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Digitonic\\MdocApi\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Digitonic\\MdocApi\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Digitonic\\MdocApi\\MdocApiServiceProvider"
+            ],
+            "aliases": {
+                "ListAllTeams": "Digitonic\\MdocApi\\Facades\\Teams\\ListAllTeams",
+                "CampaignCreate": "Digitonic\\MdocApi\\Facades\\Campaigns\\Create"
+            }
+        }
+    }
+}
