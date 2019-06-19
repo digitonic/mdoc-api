@@ -55,7 +55,7 @@ The mDoc API client can now be used as a dependency for communicating with vario
     $listTeams = new Digitonic\MdocApi\Teams\ListAllTeams($mdocApi);
     $response = $listTeams->send();
     
-    dd($response);
+    print_r($response);
 ```
 
 All endpoints that return data will return data as a `\Illuminate\Support\Collection`. This will provide various utility methods when searching the response. For more information on Laravel Collections see [https://laravel.com/docs/5.8/collections](https://laravel.com/docs/5.8/collections). Please note, this package does not require the full Laravel framework to be used.
