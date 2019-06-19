@@ -4,8 +4,12 @@ namespace Digitonic\MdocApi;
 
 use Digitonic\MdocApi\Contracts\MdocApi;
 use Digitonic\MdocApi\Exceptions\WrongData;
+use Exception;
 use GuzzleHttp\Client as Guzzle;
+use GuzzleHttp\Exception\BadResponseException;
+use GuzzleHttp\Exception\ClientException;
 use GuzzleHttp\Exception\GuzzleException;
+use GuzzleHttp\Exception\ServerException;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
 
@@ -26,7 +30,8 @@ class Client implements MdocApi
     public function send(RequestInterface $request, array $options = []): ResponseInterface {
         try {
             return $this->client->send($request);
-        } catch (GuzzleException $e) {
+        }
+        catch (ClientException $e) {
             throw WrongData::invalidValuesProvided($e);
         }
     }

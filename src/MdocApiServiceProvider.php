@@ -3,6 +3,7 @@
 namespace Digitonic\MdocApi;
 
 use Digitonic\MdocApi\Contracts\MdocApi;
+use Digitonic\MdocApi\Exceptions\InvalidConfig;
 use GuzzleHttp\Client;
 use Illuminate\Support\ServiceProvider;
 
@@ -33,6 +34,8 @@ class MdocApiServiceProvider extends ServiceProvider
         $this->app->bind(MdocApi::class, function () {
             $config = config('mdoc-api');
 
+            $this->guardAgainstInvalidConfig($config);
+
             $guzzle = new Client([
                 'base_uri' => $config['base_url'],
                 'headers' => [
@@ -44,5 +47,19 @@ class MdocApiServiceProvider extends ServiceProvider
 
             return new \Digitonic\MdocApi\Client($guzzle);
         });
+    }
+
+    /**
+     * @param  array|null  $config
+     */
+    protected function guardAgainstInvalidConfig(array $config = null)
+    {
+        if (empty($config['base_url'])) {
+            throw InvalidConfig::baseUrlNotSpecified();
+        }
+
+        if (empty($config['api_key'])) {
+            throw InvalidConfig::apiKeyNotSpecified();
+        }
     }
 }

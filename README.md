@@ -113,7 +113,7 @@ In Laravel >5.5 the package will auto register the service provider. In Laravel 
 ];
 ```
 
-In Laravel >5.5 the package will auto register the facades. In Laravel 5.4 you must install **all** facades manually.
+In Laravel >5.5 the package will auto register the facades. In Laravel <5.5 you must install **all** facades manually.
 
 ```php
 // config/app.php
