@@ -1,4 +1,4 @@
-# Very short description of the package
+# mDoc API SDK
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/digitonic/mdoc-api.svg?style=flat-square)](https://packagist.org/packages/digitonic/mdoc-api)
 [![Build Status](https://img.shields.io/travis/digitonic/mdoc-api/master.svg?style=flat-square)](https://travis-ci.org/digitonic/mdoc-api)
