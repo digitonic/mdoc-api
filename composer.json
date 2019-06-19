@@ -50,7 +50,8 @@
             ],
             "aliases": {
                 "ListAllTeams": "Digitonic\\MdocApi\\Facades\\Teams\\ListAllTeams",
-                "CampaignCreate": "Digitonic\\MdocApi\\Facades\\Campaigns\\Create"
+                "CampaignCreate": "Digitonic\\MdocApi\\Facades\\Campaigns\\Create",
+                "BulkUpload": "Digitonic\\MdocApi\\Facades\\Campaigns\\BulkUpload"
             }
         }
     }
