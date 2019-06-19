@@ -1,8 +1,9 @@
 # mDoc API SDK
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/digitonic/mdoc-api.svg?style=flat-square)](https://packagist.org/packages/digitonic/mdoc-api)
-[![Build Status](https://img.shields.io/travis/digitonic/mdoc-api/master.svg?style=flat-square)](https://travis-ci.org/digitonic/mdoc-api)
-[![Quality Score](https://img.shields.io/scrutinizer/g/digitonic/mdoc-api.svg?style=flat-square)](https://scrutinizer-ci.com/g/digitonic/mdoc-api)
+[![Code Coverage](https://scrutinizer-ci.com/g/digitonic/mdoc-api/badges/coverage.png?b=master&s=ff22d561970315a810cfd6b76df052941f81944b)](https://scrutinizer-ci.com/g/digitonic/mdoc-api/?branch=master)
+[![Build Status](https://scrutinizer-ci.com/g/digitonic/mdoc-api/badges/build.png?b=master&s=f55ccd1934b087ce19cbee1ae14b1778251b5b88)](https://scrutinizer-ci.com/g/digitonic/mdoc-api/build-status/master)
+[![Code Quality](https://scrutinizer-ci.com/g/digitonic/mdoc-api/badges/quality-score.png?b=master&s=d2b56d657bd42adb33ce812181900c87dd22690f)](https://scrutinizer-ci.com/g/digitonic/mdoc-api/?branch=master)
 [![Total Downloads](https://img.shields.io/packagist/dt/digitonic/mdoc-api.svg?style=flat-square)](https://packagist.org/packages/digitonic/mdoc-api)
 
 This is the official Framework Agnostic PHP SDK to interact with the mDoc API. Although framework agnostic by nature, the package also includes configurations for working in Laravel.
