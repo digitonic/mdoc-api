@@ -18,10 +18,6 @@ You can install the package via composer:
 composer require digitonic/mdoc-api
 ```
 
-### Laravel Usage
-
-In Laravel >5.5 the package will auto register the service provider and facades.
-
 ## Usage
 
 ### Framework Agnostic Usage
